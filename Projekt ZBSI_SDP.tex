@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage[polish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}   
+\usepackage{graphicx}   % rysunki
+
+% Problem z brakiem spisu treści w PDF-ie
+\usepackage[bookmarks=true]{hyperref}
+\usepackage{bookmark}
+\pdfbookmark[section]{\contentsname}{toc}
+\pdfbookmark{\contentsname}{Contents}
+
+\input{konfiguracja.tex}
+
+\begin{document}
+	\input{strona_tytulowa.tex}       	% strona tytułowa
+	\newpage\tableofcontents     		% Spis tresci
+	\input{opis_firmy.tex}          	% opis firmy
+	\input{audytI.tex}					% opis audytu przed zabezpieczeniem systemu
+\end{document}
