@@ -1,3 +1,4 @@
+% !TeX spellcheck = pl_PL
 \def\TytulPolski    {Projekt zarządzania bezpieczeństwem sieciowego systemu przechowywania danych}
 
 \def\NazwaFirmy {biuro rachunkowe}
@@ -25,5 +26,16 @@
     \renewcommand*{\tablename}{Tabela}
     \renewcommand*{\figurename}{Rys.} 
 }
+
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+	{-3.5ex \@plus -1ex \@minus -.2ex}%
+	{2.3ex \@plus.2ex}%
+	{\Large\scshape\textbf}}
+\renewcommand\subsection{\@startsection {subsection}{1}{\z@}%
+	{-1.5ex \@plus -1ex \@minus -.2ex}%
+	{1.3ex \@plus.2ex}%
+	{\normalfont\scshape}}
+\makeatother
 
 
