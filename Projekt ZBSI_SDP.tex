@@ -1,21 +1,45 @@
-\documentclass{article}
+% !TeX spellcheck = pl_PL
+\documentclass[12pt,oneside,a4paper]{article}
+\usepackage{polski}
+\usepackage{mdwlist}
+\usepackage{enumitem}
 \usepackage[polish]{babel}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{polski}   
-\usepackage{graphicx}   % rysunki
-
-% Problem z brakiem spisu treści w PDF-ie
-\usepackage[bookmarks=true]{hyperref}
-\usepackage{bookmark}
-\pdfbookmark[section]{\contentsname}{toc}
-\pdfbookmark{\contentsname}{Contents}
+\usepackage[utf8]{inputenc} 
+\usepackage{graphicx}
+\usepackage{sidecap}
+\usepackage{wrapfig}
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage{hyperref} 
+\hypersetup{
+colorlinks=true,
+linkcolor=black,
+filecolor=magenta,      
+urlcolor=cyan,
+}
+\usepackage{setspace}
+\usepackage{blkarray}
+\usepackage{longtable}
+\usepackage{lipsum}
+\singlespacing 
+\setlength{\parindent}{25pt}
+\setlength{\parskip}{5pt}
+\pagestyle{plain}
+\usepackage{pdflscape}
+\frenchspacing
+\widowpenalty=10000
+\clubpenalty=10000
+\usepackage[tableposition=top]{caption}
+\makeatletter
 
 \input{konfiguracja.tex}
 
 \begin{document}
+	\sloppy
 	\input{strona_tytulowa.tex}       	% strona tytułowa
-	\newpage\tableofcontents     		% Spis tresci
+	\newpage\tableofcontents 	  		% spis tresci
+	\input{wstep.tex}					% wstęp
 	\input{opis_firmy.tex}          	% opis firmy
 	\input{audytI.tex}					% opis audytu przed zabezpieczeniem systemu
 \end{document}
