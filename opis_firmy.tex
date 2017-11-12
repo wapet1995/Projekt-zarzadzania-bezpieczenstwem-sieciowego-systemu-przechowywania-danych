@@ -37,14 +37,15 @@ Poniżej wymieniony został sprzęt informatyczny znajdujący się w firmie wraz
 \begin{itemize*}
 	\item urządzenie wielofunkcyjne Canon PIXMA G3400 (12 sztuk),
 	\item niszczarka ProfiOffice PIRANHA EC 7 CC (12 sztuk),
-	\item komputer stacjonarny (21 sztuk):
+	\item komputer stacjonarny (18 sztuk):
 	\begin{itemize*}
 		\item procesor Intel i5,
 		\item pamięć 8 GB RAM DDR3,
 		\item dysk 1 TB HDD,
 	\end{itemize*}
 	\item laptop DELL Inspiron 5567 (dział IT 6 sztuk),
-	\item telefon VoIP Cisco CP-7940G (21 sztuk),
+	\item monitor 24" (2 sztuki),
+	\item telefon VoIP Cisco CP-7940G (17 sztuk),
 	\item laptop DELL Inspiron 5567 (6 sztuk),
 	\item serwer główny (1 sztuka):
 	\begin{itemize*}
@@ -87,16 +88,22 @@ Poniżej znajduje się spis oprogramowania (licencji) jakie jest \linebreak zain
 \begin{itemize}
 	\item komputery pracowników w dziale ekonomistów:
 	\begin{itemize}
-		\item Windows 10 (18 sztuk),
-		\item pakiet Office 2016 (18 sztuk),
-		\item pakiet Insert GT (18 sztuk),
-		\item Windows Defender (18 sztuk),
+		\item Windows 10 (9 sztuk),
+		\item pakiet Office 2016 (9 sztuk),
+		\item pakiet Insert GT (9 sztuk),
+		\item Windows Defender (9 sztuk),
 	\end{itemize}
 	\item komputery sekretariatu i działu sprzedaży:
 	\begin{itemize}
-		\item Windows 10 (3 sztuk),
-		\item pakiet Office 2016 (3 sztuk),
-		\item Windows Defender (3 sztuk),
+		\item Windows 10 (5 sztuk),
+		\item pakiet Office 2016 (5 sztuk),
+		\item Windows Defender (5 sztuk),
+	\end{itemize}
+	\item komputer ochrony:
+	\begin{itemize}
+		\item Windows 10 (1 sztuka),
+		\item pakiet Office 2016 (1 sztuka),
+		\item Windows Defender (1 sztuka),
 	\end{itemize}
 	\item komputery pracowników w dziale IT:
 	\begin{itemize}
@@ -168,7 +175,47 @@ Adresacja sieci:
 
 \newpage
 \subsection{Organizacja pracy}
+W firmie zatrudnionych bezpośrednio jest 32 osób. Dodatkowo 10 osób pochodzi z wynajętych zewnętrznych firm (9 ochroniarzy oraz 1 sprzątaczka). Łącznie w budynku pracuje na zmiany 42 osoby. Biura otwarte są od 6.00 do 22.00, przy czym obowiązują następujące zasady zmian:
+
+\begin{minipage}[\right]{15cm}
+	\begin{itemize*}
+		\item Administratorzy pracuj w zmianach 6:00-14:00 i 14:00-22:00 (po 2 na zmianę),
+		\item Bezpieczni pracuj w zmianach 6:00-14:00 i 14:00-22:00 (po 1 na zmianę),
+		\item Ochrona pracuje całodobowo w zmianach 12h z 24h przerwą, pracownicy ochrony zmieniają się w godzinach 4:00 i 16:00(po 3 na zmianę),
+		\item Pracownicy sekretariatu pracują od 8:00- 16:00 (po 2 na zmianę),
+		\item Dział ekonomistów pracuj w zmianach 6:00-14:00 i 14:00-22:00 (po 9 na zmianę),
+		\item Dział sprzedaży pracuj w zmianach 6:00-14:00 i 14:00-22:00 (po3 na zmianę),
+		\item Sprzątaczka przychodzi w dni niedziela, wtorek czwartek o godzinie 22:00.
+	\end{itemize*}
+\end{minipage}
+
+Hierarchia pracowników przedstawiona jest na Rys. \ref{schemat:hierarchia_pracownikow}.
+\begin{figure}[!h]
+	\includegraphics[width=15cm]{Hierarchia_pracownikow.png}
+	\caption{Hierarchia pracowników}
+	\label{schemat:hierarchia_pracownikow}
+\end{figure}
 
 \newpage
 \subsection{Przechowywane dane}
+Przechowywane dane użytkowe znajdują się na dyskach twardych \linebreak w komputerach oraz na serwerze. Pliki archiwalne oraz kopie zapasowe umieszczone zostają na dyskach serwerowych oraz starsze dane na taśmach magnetycznych w celu obniżenia kosztów. Do przechowywanych danych \linebreak należą:
 
+\begin{minipage}[\right]{15cm}
+	\begin{itemize*}
+		\item Dane finansowe klientów - pliki PDF, DOCX, pliki specyficzne dla programu Insert GT, bazy danych,
+		\item Dane personalne klientów,
+		\item Nagrania z monitoringu (miesiąc wstecz),
+		\item Kopia zapasowa:
+		\begin{itemize*}
+			\item Kompresowana,
+			\item Codziennie różnicowa dla danych klientów (raz w tygodniu pełna),
+			\item Codziennie przyrostowa dla monitoringu,
+			\item Codziennie pełna kopia konfiguracji urządzeń,
+		\end{itemize*}
+		\item Dane zatrudnienia oraz księgowość firmy.
+	\end{itemize*}
+\end{minipage}
+
+Szacowny przyrost danych:
+
+Tygodniowy przyrost danych oscyluje w okolicach 1 GB danych + kopia zapasowa około 500 MB. Kopia danych klientów z ostatniego roku trzymana jest na serwerze backupu. Kopie dalsze znajdują się na taśmach magnetycznych w archiwum - dodatkowo te, które tego wymagają są drukowane. Dane w archiwum przechowywane są przez 5 lat po tym okresie dane są przenoszone do osobnego archiwum.
