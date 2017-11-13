@@ -1,12 +1,13 @@
 % !TeX spellcheck = pl_PL
 \newpage\section{Identyfikacja zagrożeń \newline i analiza ryzyka}
-W niniejszym rozdziale zostanie przeprowadzony audyt bezpieczeństwa. Zostaną przedstawione potencjalne zagrożenia w systemie.
+W niniejszym rozdziale zostanie przeprowadzony audyt bezpieczeństwa. Zostaną przedstawione potencjalne zagrożenia w systemie oraz zdefiniowana zostanie metoda oceny ryzyka.
 
+\subsection{Potencjalne zagrożenia}
 Jednym z zagrożeń jest możliwość upadku drzewa na budynek firmy, co może spowodować pożar lub utratę prądu. W przypadku pożaru istnieje duże ryzyko utraty danych (wpływ na dostępność danych), ponieważ żadne z~pomieszczeń nie posiada systemu przeciwpożarowego.  Prawdopodobieństwo wystąpienia upadku drzewa na budynek obecnie jest stosunkowo niskie. Natomiast, trzeba wziąć pod uwagę zmieniający się klimat w Polsce, który w~przyszłości będzie sprzyjał powstawaniu silnych wiatrów, a tym samym prawdopodobieństwo wystąpienia tego zjawiska będzie coraz większe.
 
 Następnym zagrożeniem jest włamanie się do budynku. Zadanie nie jest trudne, ponieważ w oknach nie są stosowane alarmy, zamki na klucz czy też kraty, które utrudniłyby dostanie się do budynku. Również, drzwi nie są specjalnie zabezpieczone, a więc włamywacz przy pomocy, np. wytrychu jest w stanie w łatwy sposób dostać się do każdego pomieszczenia. Prawdopodobieństwo wystąpienia fizycznego włamania do budynku jest na średnim poziomie.(lub średnio-wysokim?). Skutki mogą być poważne. Włamywacz nie tylko może ukraść sprzęt/dane (zagrożenie zasad poufności danych), ale także może zainstalować oprogramowanie szpiegujące lub zmodyfikować istniejące dane (wpływ na zasady integralności danych).
 
-W komputerach pracowników używany jest Windows Defender, który nie jest tak skuteczny przeciwko wirusom, jak produkty konkurencji. W przypadku gdy, użytkownik pobierze zainfekowany plik, istnieje średnie prawdopodobieństwo, że zawirusowany zostanie komputer, czy też inne urządzenia podłączone do sieci (naruszenie zasad integralności oraz poufności).
+W komputerach pracowników używany jest Windows Defender, który nie jest tak skuteczny przeciwko wirusom jak produkty konkurencji. W przypadku gdy, użytkownik pobierze zainfekowany plik, istnieje średnie prawdopodobieństwo, że zawirusowany zostanie komputer, czy też inne urządzenia podłączone do sieci (naruszenie zasad integralności oraz poufności).
 
 Hackerzy mają ułatwione zadanie związane z dostaniem się na serwery dlatego, że w serwerach nie jest używane dodatkowe oprogramowanie związane z bezpieczeństwem (złamanie zasady poufności oraz wysokie zagrożenie integralności danych). Nie ma też sprzętowej zapory ogniowej, która filtrowałaby cały ruch sieciowy.	
 
@@ -24,6 +25,22 @@ Nieużywanie programów do blokowania instalacji programów ułatwia użytkownik
 
 Kolejnym zagrożeniem jest topologia sieci internetowej, a konkretniej połączenie poprzez sieć bezprzewodową. Istnieje możliwość wykorzystania sieci otwartej WiFi do przedostania się do innych podsieci, a nawet \linebreak w~skrajnym przypadku do serwerów (naruszenie poufności oraz integralności danych). Również niebezpieczeństwem \linebreak związanym z siecią jest brak alternatywnego połączenia z Internetem (brak zapewnienia dostępności).
 
+\subsection{Ocena ryzyka - metoda jakościowa}
+Do oceny ryzyka wykorzystano metodę jakościową OWASP Risk Rating Methodology. W zależności od wpływu oraz prawdopodobieństwa wystąpienia zagrożenia, określa się jakie ze sobą niesie ryzyko. 
+\begin{table}[!ht]
+	\centering
+	\caption{Ocena ryzyka}
+	\label{ocenaRyzyka}
+	\begin{tabular}{|l|l|l|l|l|}
+		\hline 
+		\multicolumn{5}{|l|}{Ryzyko}        \\ \hline
+		\multirow{4}{*}{} & Wysoki    	& Średnie    &  Wysokie   & Krytyczne     \\ \cline{2-5} 
+				Wpływ	  & Średni   	& Niskie    & Średnie    &  Wysokie   \\ \cline{2-5}
+						  & Niski  		& Bardzo niskie    & Niskie    & Średnie    \\ \cline{2-5}
+						  &     		& Niskie   & Średnie    &  Wysokie    \\ \hline
+			& \multicolumn{4}{l|}{Prawdopodopieństwo}  \\  \hline 
+	\end{tabular}
+\end{table}
 % uwzględnić rodzaj danych: tajne, ściśle tajne, wrazliwe
 % wyszczególnić wpływ zagrożenia na poufność, dostepność i itegralność
 % sprecyzować prawdopodobieństwo ryzyka
