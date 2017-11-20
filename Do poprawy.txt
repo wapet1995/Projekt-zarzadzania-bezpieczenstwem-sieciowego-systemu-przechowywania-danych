@@ -1,9 +1,2 @@
 - w audycie dodać komunikację
-- toalety!!!!!
-- strona tytułowa (semetrr, mail, właściciele)
-- rozdział o pracownikach wyżej,
-- liczba monitorów
-- usunąć powtórzone laptopy IT
-- okablowanie (klasa)
 - schemat sieci (kolory dla prędkości węzłów, adresacja, pełny schemat)
-- 
