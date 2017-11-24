@@ -20,6 +20,32 @@ Do oceny ryzyka wykorzystano metodę jakościową OWASP Risk Rating Methodology.
 \end{table}
 
 \subsection{Potencjalne zagrożenia}
+W tym podrozdziale opisane zostaną potencjalne zagrożenia oraz w tabelach zostanie ocenione ryzyko jakie niosą ze sobą dane niebezpieczeństwa. Zagrożenia podzielono na trzy kategorie: zagrożenia naturalne, zagrożenia ludzkie oraz zagrożenia techniczne.
+
+\subsubsection{Zagrożenia naturalne} 
+Zagrożenia naturalne.
+Zagrożenia naturalne związane są z lokalizacją przedsiębiorstwa, należą do nich:
+	\begin{itemize*}
+		\item zanik prądu,
+		\item upadek drzewa,
+		\item pożar.
+	\end{itemize*}
+Wymienione zagrożenia mają wpływ na dostępność danych. W budynku nie ma systemu przeciwpożarowego, a więc podczas pożaru, wysoka temperatura może uszkodzić sprzęt. Również uszkodzenie sprzętu może nastąpić w czasie zaniku prądu. Zasilacze awaryjne (UPS) podczas braku prądu dostarczają energię elektryczną tylko do serwerów i pozostały sprzęt jest narażony na uszkodzenie. W tabeli 2. oceniono ryzyko związane z zagrożeniami naturalnymi.
+\begin{table}[!ht]
+	\centering
+	\caption{Zagrożenia naturalne}
+	\label{zagrożeniaNaturalne}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{Podatność} & \textbf{Prawdopodobieństwo} & \textbf{Wpływ} & \textbf{Ryzyko} \\ \hline
+		Zanik prądu        & Niskie                      & Średni         & Niskie          \\ \hline
+		Upadek drzewa      & Niskie                      & Średni         & Niskie          \\ \hline
+		Pożar              & Niskie                      & Wysoki        & Średnie         \\ \hline
+	\end{tabular}
+\end{table}
+
+\subsubsection{Zagrożenia ludzkie}
+To na dole jest do zrobienie :)  \\
 Jednym z zagrożeń jest możliwość upadku drzewa na budynek firmy, co może spowodować pożar lub utratę prądu. W przypadku pożaru istnieje duże ryzyko utraty danych (wpływ na dostępność danych), ponieważ żadne z~pomieszczeń nie posiada systemu przeciwpożarowego.  Prawdopodobieństwo wystąpienia upadku drzewa na budynek obecnie jest stosunkowo niskie. Natomiast, trzeba wziąć pod uwagę zmieniający się klimat w Polsce, który w~przyszłości będzie sprzyjał powstawaniu silnych wiatrów, a tym samym prawdopodobieństwo wystąpienia tego zjawiska będzie coraz większe. \\ \colorbox{yellow}{Wpływ - średni, prawdopodobieństwo - niskie, ryzyko - niskie.}
 
 Następnym zagrożeniem jest włamanie się do budynku. Zadanie nie jest trudne, ponieważ w oknach nie są stosowane alarmy, zamki na klucz czy też kraty, które utrudniłyby dostanie się do budynku. Również, drzwi nie są specjalnie zabezpieczone, a więc włamywacz przy pomocy, np. wytrychu jest w stanie w łatwy sposób dostać się do każdego pomieszczenia. Prawdopodobieństwo wystąpienia fizycznego włamania do budynku jest na średnim poziomie. Skutki mogą być poważne. Włamywacz nie tylko może ukraść sprzęt/dane (zagrożenie zasad poufności danych), ale także może zainstalować oprogramowanie szpiegujące lub zmodyfikować istniejące dane (wpływ na zasady integralności danych). \\ \colorbox{orange}{Wpływ - wysoki, prawdopodobieństwo - średnie, ryzyko - wysokie.}
