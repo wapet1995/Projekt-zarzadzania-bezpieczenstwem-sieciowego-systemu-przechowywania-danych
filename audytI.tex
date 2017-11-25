@@ -19,17 +19,31 @@ Do oceny ryzyka wykorzystano metodę jakościową OWASP Risk Rating Methodology.
 	\end{tabular}
 \end{table}
 
-\subsection{Potencjalne zagrożenia}
+\subsection{Zagrożone zasoby}
+Każdy zasób należy chronić, ale nie wszystkie wymagają zabezpieczenia na jednolitym poziomie. W tabeli \ref{tab:spis_zasobow} znajduje się spis sprzętu oraz danych wraz z ich priorytetem  ważności (0 --- najważniejszy, 10 --- najniższy), które zostaną brane pod uwagę podczas przeprowadzania audytu. 
+
+\definecolor{lightgray}{gray}{0.9}
+\begin{longtable}[!ht]{|m{3.5cm}|m{2cm}|m{7cm}|}
+	\caption{Wykaz zasobów uwzględnianych w audycie}
+	\label{tab:spis_zasobow}\\
+	\hline	
+	\rowcolor{lightgray}\textbf{Zasób} & \textbf{Priorytet ważności} & \textbf{Opis} \\ \hline
+	\multicolumn{3}{|c|}{Serwery:} \\ \hline
+	Kopie zapasowe & 0 & Dane potrzebne do odzyskania \linebreak sprawności systemów \\ \hline
+	
+\end{longtable}
+
+\subsection{Zagrożenia systemu}
 W tym podrozdziale opisane zostaną potencjalne zagrożenia oraz w tabelach zostanie ocenione ryzyko jakie niosą ze sobą dane niebezpieczeństwa. Zagrożenia podzielono na trzy kategorie: zagrożenia naturalne, zagrożenia ludzkie oraz zagrożenia techniczne.
 
 \subsubsection{Zagrożenia naturalne} 
-Zagrożenia naturalne.
 Zagrożenia naturalne związane są z lokalizacją przedsiębiorstwa, należą do nich:
-	\begin{itemize*}
-		\item zanik prądu,
-		\item upadek drzewa,
-		\item pożar.
-	\end{itemize*}
+\begin{itemize*}
+	\item zanik prądu,
+	\item upadek drzewa,
+	\item pożar.
+\end{itemize*}
+
 Wymienione zagrożenia mają wpływ na dostępność danych. W budynku nie ma systemu przeciwpożarowego, a więc podczas pożaru, wysoka temperatura może uszkodzić sprzęt. Również uszkodzenie sprzętu może nastąpić w czasie zaniku prądu. Zasilacze awaryjne (UPS) podczas braku prądu dostarczają energię elektryczną tylko do serwerów i pozostały sprzęt jest narażony na uszkodzenie. W tabeli 2. oceniono ryzyko związane z zagrożeniami naturalnymi.
 \begin{table}[!ht]
 	\centering
