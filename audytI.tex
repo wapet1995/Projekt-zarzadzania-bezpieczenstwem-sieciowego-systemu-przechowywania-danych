@@ -6,7 +6,7 @@ W niniejszym rozdziale zostanie przeprowadzony audyt bezpieczeństwa. Zostaną p
 Do oceny ryzyka wykorzystano metodę jakościową OWASP Risk Rating Methodology. W zależności od wpływu oraz prawdopodobieństwa wystąpienia zagrożenia, określa się jakie ze sobą niesie ryzyko. 
 \begin{table}[!ht]
 	\centering
-	\caption{Ocena ryzyka}
+	\caption{Kryteria oceny jakościowej}
 	\label{ocenaRyzyka}
 	\begin{tabular}{|c|c|c|c|c|}
 		\hline 
@@ -20,31 +20,38 @@ Do oceny ryzyka wykorzystano metodę jakościową OWASP Risk Rating Methodology.
 \end{table}
 
 \subsection{Zagrożone zasoby}
-Każdy zasób należy chronić, ale nie wszystkie wymagają zabezpieczenia na jednolitym poziomie. W tabeli \ref{tab:spis_zasobow} znajduje się spis sprzętu oraz danych wraz z ich priorytetem  ważności (0 --- najważniejszy, 10 --- najniższy), które zostaną brane pod uwagę podczas przeprowadzania audytu. 
+Każdy zasób należy chronić, ale nie wszystkie wymagają zabezpieczenia na jednolitym poziomie. W tabeli \ref{tab:spis_zasobow} znajduje się spis sprzętu oraz danych wraz z ich priorytetem  ważności (1 --- najważniejszy, 10 --- najniższy), które zostaną brane pod uwagę podczas przeprowadzania audytu. 
 
 \definecolor{lightgray}{gray}{0.9}
-\begin{longtable}[!ht]{|m{3.5cm}|m{2cm}|m{7cm}|}
+\begin{longtable}[!ht]{|p{0.5cm}|m{4cm}|m{2cm}|m{6cm}|}
 	\caption{Wykaz zasobów uwzględnianych w audycie}
 	\label{tab:spis_zasobow}\\
 	\hline	
-	\rowcolor{lightgray}\textbf{Zasób} & \textbf{Priorytet ważności} & \textbf{Opis} \\ \hline
-	\multicolumn{3}{|c|}{Serwery:} \\ \hline
-	Kopie zapasowe & 1 & Dane potrzebne do odzyskania \linebreak sprawności systemów \\ \hline
-	Dyski twarde & 0 & Pamięć trwała serwera \\ \hline
-	Baza danych & 3 & Przechowywanie wrażliwych danych klientów \\ \hline
-	Zasilanie & 7 & Utrzymanie pracy serwerów \\ \hline
-	\multicolumn{3}{|c|}{Komputery pracowników:} \\ \hline	
-	Dyski twarde & 5 & Pamięć trwała komputera \\ \hline
-	Kopie zapasowe & 6 & Dane potrzebne do odtworzenia \linebreak systemu \\ \hline
-	Dane klientów & 3 & Dane osobowe oraz finansowe klientów \\ \hline
-	Zasilanie komputerów stacjonarnych & 9 & Utrzymanie pracy sprzętu \\ \hline
-	Zasilanie laptopów & 10 &  Utrzymanie pracy sprzętu \\ \hline
-	\multicolumn{3}{|c|}{Archiwum:} \\ \hline
-	Dokumenty papierowe & 4 & Dokumenty archiwalne klientów \\	\hline
-	Taśmy magnetyczne z kopiami zapasowymi & 2 & Dane potrzebne do odzyskania \linebreak sprawności systemu \\ \hline
-	\multicolumn{3}{|c|}{Inne:} \\ \hline
-	Rejestrator kamer & 6 & Nagrania z monitoringu \\ \hline
-	 
+	\rowcolor{lightgray}\textbf{Lp.} & \textbf{Zasób} & \textbf{Priorytet ważności} & \textbf{Opis} \\ \hline
+	\multicolumn{4}{|c|}{Serwery:} \\ \hline
+	1 & Kopie zapasowe & 2 & Dane potrzebne do odzyskania \linebreak sprawności systemów \\ \hline
+	2 & Dyski twarde & 1 & Pamięć trwała serwera \\ \hline
+	3 & Baza danych & 3 & Przechowywanie wrażliwych danych klientów \\ \hline
+	4 & Zasilanie & 8 & Utrzymanie pracy serwerów \\ \hline
+	\multicolumn{4}{|c|}{Komputery pracowników:} \\ \hline	
+	5 & Dyski twarde & 6 & Pamięć trwała komputera \\ \hline
+	6 & Kopie zapasowe & 7 & Dane potrzebne do odtworzenia \linebreak systemu \\ \hline
+	7 & Dane klientów & 4 & Dane osobowe oraz finansowe klientów \\ \hline
+	8 & Zasilanie komputerów stacjonarnych & 9 & Utrzymanie pracy sprzętu \\ \hline
+	9 & Zasilanie laptopów & 10 &  Utrzymanie pracy sprzętu \\ \hline
+	10 &Hasła użytkowników & 5 & Hasła systemowe użytkownikóa \\ \hline
+	\multicolumn{4}{|c|}{Archiwum:} \\ \hline
+	11 & Dokumenty papierowe & 4 & Dokumenty archiwalne klientów \\	\hline
+	12 & Taśmy magnetyczne z kopiami zapasowymi & 3 & Dane potrzebne do odzyskania \linebreak  sprawności systemu \\ \hline
+	\multicolumn{4}{|c|}{Inne:} \\ \hline
+	13 & Rejestrator kamer & 8 & Nagrania z monitoringu \\ \hline
+	14 & Sieć bezprzewodowa & 6 & Sieć połączona z siecią firmy \\ \hline
+	15 & Switche sieciowe & 6 & Pośredniczą w przesyle danych przez sieć \\ \hline
+	16 & Router & 8 & Umożliwia dostęp do Internetu \\ \hline
+	17 & Telefony IP & 6 & Umożliwiają komunikację wewnątrz budynku \\ \hline
+	18 & Bramka VoIP & 5 & Pośredniczy pomiędzy połączeniem telefonów IP \\ \hline
+	19 & Zasilanie budynku & 10 & Zasilanie oświetlania, drzwi przesuwnych itp. \\ \hline
+	20 & Dostępność do Internetu & 10 & Dostęp do Internetu od dostawcy \\ \hline 
 \end{longtable}
 
 \subsection{Zagrożenia systemu}
