@@ -148,44 +148,13 @@ Poniżej znajduje się spis oprogramowania (licencji) jakie jest \linebreak zain
 \subsection{Schemat sieci informatycznej}
 Sieci informatyczna składa się z routera do którego podłączony jest \linebreak Internet (poprzez światłowód), switcha głównego, 7 switchy niezarządzanych, centrali VoIP oraz 7 punktów dostępowych. Schemat sieci przedstawiony jest na Rys. \ref{schemat:schemat_sieci_infor}. Oznaczenie trzech kropek symbolizuje możliwość podpięcia wielu urządzeń do sieci.
 
+\begin{landscape}
 \begin{figure}[!h]
-	\includegraphics[width=15cm]{Schemat_sieci.png}
+	\includegraphics[width=24cm]{Schemat_sieci.png}
 	\caption{Schemat sieci informatycznej}
 	\label{schemat:schemat_sieci_infor}
 \end{figure}
-
-\newpage
-Adresacja sieci:
-
-\hspace{-0.5cm}\begin{minipage}{13.5cm}
-\begin{itemize*}
-	\item Router --- brama VoIP --- switch główny:
-	\begin{itemize*}
-		\item Adres sieci: 192.168.0.0,
-		\item Maska sieci: 255.255.255.0,
-	\end{itemize*}
-	\item Switch główny --- serwer główny:
-	\begin{itemize*}
-		\item Adres sieci: 192.168.1.0,
-		\item Maska sieci: 255.255.255.0,
-	\end{itemize*}
-	\item Switch główny --- access pointy --- urządzenia podłączone przez WiFi:
-	\begin{itemize*}
-		\item Adres sieci: 192.168.2.0,
-		\item Maska sieci: 255.255.255.0,
-	\end{itemize*}
-	\item Switch główny --- rejestrator:
-	\begin{itemize*}
-		\item Adres sieci: 192.168.3.0,
-		\item Maska sieci: 255.255.255.0,
-	\end{itemize*}
-	\item Switch główny --- urządzenia podłączone do switchy niezarządzalnych:
-	\begin{itemize*}
-		\item Adres sieci: 192.168.4.0,
-		\item Maska sieci: 255.255.255.0,
-	\end{itemize*}
-\end{itemize*}
-\end{minipage}
+\end{landscape}
 
 \newpage
 \subsection{Przechowywane dane}

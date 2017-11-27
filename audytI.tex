@@ -28,22 +28,22 @@ Każdy zasób należy chronić, ale nie wszystkie wymagają zabezpieczenia na je
 	\label{tab:spis_zasobow}\\
 	\hline	
 	\rowcolor{lightgray}\textbf{Lp.} & \textbf{Zasób} & \textbf{Priorytet ważności} & \textbf{Opis} \\ \hline
-	\multicolumn{4}{|c|}{Serwery:} \\ \hline
+	\rowcolor{lightgray}\multicolumn{4}{|c|}{Serwery:} \\ \hline
 	1 & Kopie zapasowe & 2 & Dane potrzebne do odzyskania \linebreak sprawności systemów \\ \hline
 	2 & Dyski twarde & 1 & Pamięć trwała serwera \\ \hline
 	3 & Baza danych & 3 & Przechowywanie wrażliwych danych klientów \\ \hline
 	4 & Zasilanie & 8 & Utrzymanie pracy serwerów \\ \hline
-	\multicolumn{4}{|c|}{Komputery pracowników:} \\ \hline	
+	\rowcolor{lightgray}\multicolumn{4}{|c|}{Komputery pracowników:} \\ \hline	
 	5 & Dyski twarde & 6 & Pamięć trwała komputera \\ \hline
 	6 & Kopie zapasowe & 7 & Dane potrzebne do odtworzenia \linebreak systemu \\ \hline
 	7 & Dane klientów & 4 & Dane osobowe oraz finansowe klientów \\ \hline
 	8 & Zasilanie komputerów stacjonarnych & 9 & Utrzymanie pracy sprzętu \\ \hline
 	9 & Zasilanie laptopów & 10 &  Utrzymanie pracy sprzętu \\ \hline
-	10 &Hasła użytkowników & 5 & Hasła systemowe użytkownikóa \\ \hline
-	\multicolumn{4}{|c|}{Archiwum:} \\ \hline
+	10 & Hasła użytkowników & 5 & Hasła systemowe użytkownikóa \\ \hline
+	\rowcolor{lightgray}\multicolumn{4}{|c|}{Archiwum:} \\ \hline
 	11 & Dokumenty papierowe & 4 & Dokumenty archiwalne klientów \\	\hline
 	12 & Taśmy magnetyczne z kopiami zapasowymi & 3 & Dane potrzebne do odzyskania \linebreak  sprawności systemu \\ \hline
-	\multicolumn{4}{|c|}{Inne:} \\ \hline
+	\rowcolor{lightgray}\multicolumn{4}{|c|}{Inne:} \\ \hline
 	13 & Rejestrator kamer & 8 & Nagrania z monitoringu \\ \hline
 	14 & Sieć bezprzewodowa & 6 & Sieć połączona z siecią firmy \\ \hline
 	15 & Switche sieciowe & 6 & Pośredniczą w przesyle danych przez sieć \\ \hline
@@ -51,7 +51,7 @@ Każdy zasób należy chronić, ale nie wszystkie wymagają zabezpieczenia na je
 	17 & Telefony IP & 6 & Umożliwiają komunikację wewnątrz budynku \\ \hline
 	18 & Bramka VoIP & 5 & Pośredniczy pomiędzy połączeniem telefonów IP \\ \hline
 	19 & Zasilanie budynku & 10 & Zasilanie oświetlania, drzwi przesuwnych itp. \\ \hline
-	20 & Dostępność do Internetu & 10 & Dostęp do Internetu od dostawcy \\ \hline 
+	20 & Dostępność \linebreak do Internetu & 10 & Dostęp do Internetu od dostawcy \\ \hline 
 \end{longtable}
 
 \subsection{Zagrożenia systemu}
@@ -79,7 +79,118 @@ Wymienione zagrożenia mają wpływ na dostępność danych. W budynku nie ma sy
 	\end{tabular}
 \end{table}
 
+\subsection{Zagrożenia techniczne}
+System firmy narażony jest również na zagrożenia stricte związane z informatyka (aspektem technicznym). Niebezpieczeństwa ze strony technicznej wymieniono zostały w tabeli  \ref{tab:zagrozenia_techniczne}. Określono stopień ryzyka dla każdego istotnego zasobu systemu.
+
+\definecolor{verylightgray}{gray}{0.5}
+\begin{landscape}
+\begin{longtable}[!ht]{|m{4cm}|m{6cm}|m{4.5cm}|m{3cm}|m{3cm}|}
+	\caption{Wykaz zagrożeń technicznych}
+	\label{tab:zagrozenia_techniczne}\\
+	\hline	
+	\textbf{Podatność} & \textbf{Zasoby} & \textbf{Prawdopodobieństwo} & \textbf{Wpływ} &  \textbf{Ryzyko} \\ \hline
+	\multirow{5}{4cm}{Złamanie hasła administratora dowolnego komputera}  
+		&   Serwer --- baza danych,  & Wysokie & Wysoki & \textcolor{pink}{Krytyczne}  \\ \cline{2-5}
+		& Komputery pracowników --- dane klientów & Wysokie & Wysoki & \textcolor{pink}{Krytyczne} \\ \cline{2-5}
+		& Komputery pracowników --- hasła użytkowników & Średnie & Wysoki & \textcolor{red}{Wysokie} \\ \cline{2-5}
+		& Komputery pracowników --- kopie zapasowe & Wysokie & Średni & \textcolor{red}{Wysokie} \\ \cline{2-5}
+		& Bramka VoIP & Średnie & Średni & \textcolor{orange}{Średnie} \\ \cline{2-5}
+		& Telefon IP & Niskie & Średni & \textcolor{yellow}{Niskie} \\ \cline{2-5}
+		& Rejestrator kamer & Niskie & Średni & \textcolor{yellow}{Niskie} \\ \cline{2-5}
+		& Pozostałe zasoby & Niski & Niski & \textcolor{green}{Bardzo niskie} \\ \cline{2-5}
+	\hline
+	\multirow{11}{4cm}{Szkodliwe oprogramowanie} 
+		& Serwer --- kopie zapasowe & Średnie & Wysoki & \textcolor{red}{Wysokie} \\ \cline{2-5}
+		& Serwer --- dyski twarde & Średnie & Wysoki & \textcolor{red}{Wysokie} \\ \cline{2-5}
+		& Serwer --- baza danych & Średnie & Wysoki & \textcolor{red}{Wysokie} \\ \cline{2-5}
+		& Komputery pracowników --- dyski twarde & Wysokie & Średni & \textcolor{red}{Wysokie} \\ \cline{2-5}
+		& Komputery pracowników --- kopie zapasowe & Średnie & Średni & \textcolor{orange}{Średnie} \\ \cline{2-5}
+		& Komputery pracowników --- dane klientów & Wysokie & Wysoki & \textcolor{pink}{Krytyczne} \\ \cline{2-5}
+		& Komputery pracowników --- hasła użytkowników & Średnie & Wysoki & \textcolor{red}{Wysokie} \\ \cline{2-5}
+		& Sieć bezprzewodowa & Niskie & Średni & \textcolor{yellow}{Niskie} \\ \cline{2-5}
+		& Bramka VoIP & Średnie & Średni & \textcolor{orange}{Średnie} \\ \cline{2-5}
+		& Telefon IP & Średnie & Średni & \textcolor{orange}{Średnie} \\ \cline{2-5}
+		& Pozostałe zasoby & Niskie & Niski & \textcolor{green}{Bardzo niskie} \\ \cline{2-5}
+	\hline
+	\multirow{8}{4cm}{Infekcja komputera wirusem typu ransomware}
+		& Serwer --- kopie zapasowe & Wysokie & Wysoki & \textcolor{pink}{Krytyczne} \\ \cline{2-5}
+		& Serwer --- dyski twarde & Wysokie & Wysoki & \textcolor{pink}{Krytyczne} \\ \cline{2-5}
+		& Serwer --- baza danych & Wysokie & Wysoki & \textcolor{pink}{Krytyczne} \\ \cline{2-5}
+		& Komputery pracowników --- dyski twarde & Wysokie & Średni & \textcolor{red}{Wysokie} \\ \cline{2-5}
+		& Komputery pracowników --- kopie zapasowe & Wysokie & Średni & \textcolor{red}{Wysokie} \\ \cline{2-5}
+		& Komputery pracowników --- dane klientów & Wysokie & Średni & \textcolor{red}{Wysokie} \\ \cline{2-5}
+		& Rejestrator kamer & Wysokie & Niski & \textcolor{orange}{Średnie} \\ \cline{2-5}
+		& Pozostałe zasoby & Niskie & Niski & \textcolor{green}{Bardzo niskie} \\ \cline{2-5}
+ 	\hline 
+ 	\multirow{6}{4cm}{Zużycie sprzętu (dysk, zasilacz, inne podzespoły)}
+ 		& Serwer --- dyski twarde & Wysokie & Wysoki & \textcolor{pink}{Krytyczne} \\ \cline{2-5}
+ 		& Serwer --- kopie zapasowe & Wysokie & Wysoki & \textcolor{pink}{Krytyczne} \\ \cline{2-5}
+ 		& Serwer --- dyski twarde & Wysokie & Wysoki & \textcolor{pink}{Krytyczne} \\ \cline{2-5}
+ 		& Serwer --- zasilanie & Wysokie &Średni & \textcolor{red}{Wysokie} \\ \cline{2-5}
+ 		& Komputery pracowników --- dyski twarde & Niskie & Średni & \textcolor{yellow}{Niskie} \\ \cline{2-5}
+ 		& Komputery pracowników --- kopie zapasowe & Niskie & Średni & \textcolor{yellow}{Niskie} \\ \cline{2-5}
+ 	\hline
+\end{longtable}
+\end{landscape}
+
 \subsubsection{Zagrożenia ludzkie}
+
+\begin{landscape}
+\begin{longtable}[!ht]{|m{4cm}|m{6cm}|m{4.5cm}|m{3cm}|m{3cm}|}
+	\caption{Wykaz zagrożeń ludzkich}
+	\label{tab::zagrozenia_ludzkie} \\
+		\hline
+		\textbf{Podatność} & \textbf{Zasoby} & \textbf{Prawdopodobieństwo} & \textbf{Wpływ} &  \textbf{Ryzyko} \\ \hline
+		\multirow{8}{4cm}{kradzież sprzętu oraz dokumentów przez pracowników lub osoby spoza firmy}             & Serwer - kopie zapasowe                           & średnie            & wysoki & wysokie       \\ \cline{2-5} 
+		& Serwer - dyski twarde                             & średnie            & wysoki & wysokie       \\ \cline{2-5} 
+		& Serwer - baza danych                              & średnie            & wysoki & wysokie       \\ \cline{2-5} 
+		& Komputery pracowników - kopie zapasowe            & średnie            & wysoki & wysokie       \\ \cline{2-5} 
+		& Komputery pracowników - dyski twarde              & średnie            & wysoki & wysokie       \\ \cline{2-5} 
+		& Archiwum - dokumenty papierowe                    & średnie            & wysoki & wysokie       \\ \cline{2-5} 
+		& Archiwum -taśmy magnetyczne z kopiami zapasowymi  & średnie            & wysoki & wysokie       \\ \cline{2-5} 
+		& Pozostałe                                         & niskie             & średni & niskie        \\ \hline
+		\multirow{7}{4cm}{zainstalowanie zainfekowanego oprogramowania przez pracowników lub osoby spoza firmy} & Komputery pracowników - dyski twarde              & wysokie            & wysoki & krytyczne     \\ \cline{2-5} 
+		& Komputery pracowników - dane klientów             & wysokie            & wysoki & krytyczne     \\ \cline{2-5} 
+		& Komputery pracowników - kopie zapasowe            & wysokie            & wysoki & krytyczne     \\ \cline{2-5} 
+		& Rejestrator kamer                                 & średnie            & średni & średnie       \\ \cline{2-5} 
+		& Router                                            & średnie            & wysoki & wysokie       \\ \cline{2-5} 
+		& Dostęp do Internetu                               & średnie            & wysoki & wysokie       \\ \cline{2-5} 
+		& Pozostałe                                         & niskie             & niski  & bardzo niskie \\ \hline
+		\newpage
+		\hline
+		\multirow{8}{4cm}{zniszczenie sprzętu przez pracowników lub osoby spoza firmy}
+		& Serwer - kopie zapasowe                           & niskie             & wysoki & średnie       \\ \cline{2-5} 
+		& Serwer - dyski twarde                             & niskie             & wysoki & średnie       \\ \cline{2-5} 
+		& Serwer - baza danych                              & niskie             & wysoki & średnie       \\ \cline{2-5} 
+		& Komputery pracowników - dyski twarde              & średnie            & wysoki & wysokie       \\ \cline{2-5} 
+		& Komputery pracowników - kopie zapasowe            & średnie            & wysoki & wysokie       \\ \cline{2-5} 
+		& Komputery pracowników - dane klientów             & średnie            & wysoki & wysokie       \\ \cline{2-5} 
+		& Archiwum - taśmy magnetyczne z kopiami zapasowymi & niskie             & wysoki & średnie       \\ \cline{2-5} 
+		& Pozostałe                                         & niskie             & średni & niskie        \\ \hline
+		\multirow{5}{4cm}{usunięcie danych przez pracowników lub osoby spoza firmy}                             & Serwer - kopie zapasowe                           & średnie            & wysoki & wysokie       \\ \cline{2-5} 
+		& Serwer - baza danych                              & średnie            & wysoki & wysokie       \\ \cline{2-5} 
+		& Komputery pracowników - kopie zapasowe            & średnie            & średni & średnie       \\ \cline{2-5} 
+		& Komputery pracowników - dane pracowników          & średnie            & wysoki & wysokie       \\ \cline{2-5} 
+		& Komputery pracowników - dyski twarde              & średnie            & wysoki & wysokie       \\ \hline
+		\newpage
+		\hline
+		\multirow{6}{4cm}{nieautoryzowana zmiana treści dokumentów przez pracowników lub osoby spoza firmy}     & Serwer - kopie zapasowe                           & niskie             & średni & niskie        \\ \cline{2-5} 
+		& Serwer - baza danych                              & średnie            & wysoki & wysokie       \\ \cline{2-5} 
+		& Komputery pracowników - kopie zapasowe            & niskie             & średni & niskie        \\ \cline{2-5} 
+		& Komputery pracowników - dane klientów             & średnie            & wysoki & wysokie       \\ \cline{2-5} 
+		& Archiwum - dokumenty papierwowe                   & niskie             & średni & niskie        \\ \cline{2-5} 
+		& Archiwum - taśmy magnetyczne z kopiami zapasowymi & niskie             & średni & niskie        \\ \hline
+		\multirow{8}{4cm}{atak hakerski}                                                                        & Serwer - kopie zapasowe                           & wysokie            & wysoki & krytyczne     \\ \cline{2-5} 
+		& Serwer - dyski twarde                             & wysokie            & wysoki & krytyczne     \\ \cline{2-5} 
+		& Serwer - baza danych                              & wysokie            & wysoki & krytyczne     \\ \cline{2-5} 
+		& Komputery pracowników - kopie zapasowe            & wysokie            & wysoki & krytyczne     \\ \cline{2-5} 
+		& Komputery pracowników - dyski twarde              & wysokie            & wysoki & krytyczne     \\ \cline{2-5} 
+		& Komputery pracowników - dane klientów             & wysokie            & wysoki & krytyczne     \\ \cline{2-5} 
+		& Router                                            & wysokie            & wysoki & krytyczne     \\ \cline{2-5} 
+		& Pozostałe                                         & średnie            & wysoki & wysokie       \\ \hline
+\end{longtable}
+\end{landscape}
+
 To na dole jest do zrobienie :)  \\
 Jednym z zagrożeń jest możliwość upadku drzewa na budynek firmy, co może spowodować pożar lub utratę prądu. W przypadku pożaru istnieje duże ryzyko utraty danych (wpływ na dostępność danych), ponieważ żadne z~pomieszczeń nie posiada systemu przeciwpożarowego.  Prawdopodobieństwo wystąpienia upadku drzewa na budynek obecnie jest stosunkowo niskie. Natomiast, trzeba wziąć pod uwagę zmieniający się klimat w Polsce, który w~przyszłości będzie sprzyjał powstawaniu silnych wiatrów, a tym samym prawdopodobieństwo wystąpienia tego zjawiska będzie coraz większe. \\ \colorbox{yellow}{Wpływ - średni, prawdopodobieństwo - niskie, ryzyko - niskie.}
 
