@@ -66,18 +66,24 @@ Zagrożenia naturalne związane są z lokalizacją przedsiębiorstwa, należą d
 \end{itemize*}
 
 Wymienione zagrożenia mają wpływ na dostępność danych. W budynku nie ma systemu przeciwpożarowego, a więc podczas pożaru, wysoka temperatura może uszkodzić sprzęt. Również uszkodzenie sprzętu może nastąpić w czasie zaniku prądu. Zasilacze awaryjne (UPS) podczas braku prądu dostarczają energię elektryczną tylko do serwerów i pozostały sprzęt jest narażony na uszkodzenie. W tabeli 2. oceniono ryzyko związane z zagrożeniami naturalnymi.
-\begin{table}[!ht]
-	\centering
+\begin{landscape}[ht!]
+	\begin{longtable}{|m{4cm}|m{6cm}|m{4.5cm}|m{3cm}|m{3cm}|}
 	\caption{Zagrożenia naturalne}
-	\label{zagrożeniaNaturalne}
-	\begin{tabular}{|c|c|c|c|}
+	\label{tab:zagrozenia_naturalne}\\
 		\hline
-		\textbf{Podatność} & \textbf{Prawdopodobieństwo} & \textbf{Wpływ} & \textbf{Ryzyko} \\ \hline
-		Zanik prądu        & Niskie                      & Średni         & Niskie          \\ \hline
-		Upadek drzewa      & Niskie                      & Średni         & Niskie          \\ \hline
-		Pożar              & Niskie                      & Wysoki        & Średnie         \\ \hline
-	\end{tabular}
-\end{table}
+		\multicolumn{1}{|l|}{\textbf{Podatność}}           & \multicolumn{1}{l|}{\textbf{Zasoby}}                        & \multicolumn{1}{l|}{\textbf{Prawdopodobieństwo}} & \multicolumn{1}{l|}{\textbf{Wpływ}} & \multicolumn{1}{l|}{\textbf{Ryzyko}} \\ \hline
+		\multicolumn{1}{|l|}{\multirow{8}{*}{Zanik prądu}} & \multicolumn{1}{l|}{Serwer - kopia zapasowa}                & \multicolumn{1}{l|}{Niskie}                      & \multicolumn{1}{l|}{Wysoki}         & \multicolumn{1}{l|}{Średnie}         \\ \cline{2-5} 
+		\multicolumn{1}{|l|}{}                             & \multicolumn{1}{l|}{Serwer - dyski twarde}                  & \multicolumn{1}{l|}{Niskie}                      & \multicolumn{1}{l|}{Wysoki}         & \multicolumn{1}{l|}{Średnie}         \\ \cline{2-5} 
+		\multicolumn{1}{|l|}{}                             & \multicolumn{1}{l|}{Serwer - baza danych}                   & \multicolumn{1}{l|}{Niskie}                      & \multicolumn{1}{l|}{Wysoki}         & \multicolumn{1}{l|}{Średnie}         \\ \cline{2-5} 
+		\multicolumn{1}{|l|}{}                             & \multicolumn{1}{l|}{Rejestrator kamer}                      & \multicolumn{1}{l|}{Niskie}                      & \multicolumn{1}{l|}{Wysoki}         & \multicolumn{1}{l|}{Średnie}         \\ \cline{2-5} 
+		\multicolumn{1}{|l|}{}                             & \multicolumn{1}{l|}{Komputery pracowników - dyski twarde}   & \multicolumn{1}{l|}{Niskie}                      & \multicolumn{1}{l|}{Średni}         & \multicolumn{1}{l|}{Średnie}         \\ \cline{2-5} 
+		\multicolumn{1}{|l|}{}                             & \multicolumn{1}{l|}{Komputery pracowników - kopie zapasowe} & \multicolumn{1}{l|}{Niskie}                      & \multicolumn{1}{l|}{Średni}         & \multicolumn{1}{l|}{Średnie}         \\ \cline{2-5} 
+		\multicolumn{1}{|l|}{}                             & \multicolumn{1}{l|}{Komputery pracowników - dane klientów}  & \multicolumn{1}{l|}{Niskie}                      & \multicolumn{1}{l|}{Średni}         & \multicolumn{1}{l|}{Średnie}         \\ \cline{2-5} 
+		\multicolumn{1}{|l|}{}                             & \multicolumn{1}{l|}{Pozostałe}                              & \multicolumn{1}{l|}{Niskie}                      & \multicolumn{1}{l|}{Niski}          & \multicolumn{1}{l|}{Bardzo niskie}   \\ \hline
+		\multicolumn{1}{|l|}{Upadek drzewa}                & \multicolumn{1}{l|}{Wszystkie}                              & \multicolumn{1}{l|}{Niskie}                      & \multicolumn{1}{l|}{Średni}         & \multicolumn{1}{l|}{Niskie}          \\ \hline
+		\multicolumn{1}{|l|}{Pożar}                        & \multicolumn{1}{l|}{Wszystkie}                              & \multicolumn{1}{l|}{Niskie}                      & \multicolumn{1}{l|}{Wysokie}        & \multicolumn{1}{l|}{Średnie}         \\ \hline                                 
+	\end{longtable}
+\end{landscape}
 
 \subsubsection{Zagrożenia techniczne}
 System firmy narażony jest również na zagrożenia stricte związane z informatyka (aspektem technicznym). Niebezpieczeństwa ze strony technicznej wymieniono zostały w tabeli  \ref{tab:zagrozenia_techniczne}. Określono stopień ryzyka dla każdego istotnego zasobu systemu.
