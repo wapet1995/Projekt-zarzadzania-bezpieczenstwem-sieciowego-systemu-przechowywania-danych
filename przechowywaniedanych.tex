@@ -1,5 +1,5 @@
 % !TeX spellcheck = pl_PL
-\section{System przechowywania \linebreak danych}
+\section{System przechowywania \newline danych}
 Rozdział ten przedstawia propozycję systemu przechowywania danych. Struktura sieci informatycznej jest rozbudowana, zatem aby scentralizować dostęp do danych zastosowano technologię NAS. 
 
 \subsection{Struktura NAS}
@@ -17,6 +17,8 @@ Dostęp do serwera NAS nie wymagają telefony IP oraz bramka VoIP, zatem nie zos
 Serwer główny ze względu na potrzebę niezawodności pracy posiada macierz dyskową RAID 4 z 3 dyskami HDD każdy o pojemności 2TB. W przypadku awarii dowolnego dysku istnieje możliwość odtworzenia utraconych danych. Jest to wolniejsze rozwiązanie niż powiedzmy RAID 5, ale zapewnia większe bezpieczeństwo w przypadku uszkodzenia. Wykorzystując daną macierz dyskową posiadamy 4TB pojemności dyskowej, wg podanych informacji od zleceniodawców taki rozmiar pamięci powinien wystarczyć na przechowywanie danych przez 50 lat (jest to okres przez jaki należy przechowywać dane księgowe).
 
 Serwer zapasowy posiada kompletną kopię macierzy dyskowej z serwera główne zapewniając redundancję w przypadku całkowitej awarii sprzętu. W~ten sposób zabezpieczamy w znacznym stopniu dane przed utraceniem.
+
+Na serwerach w środowisku wirtualnym będzie uruchomiony system FreeNAS, który będzie zarządzał przechowywaniem plików. W systemie FreeNAS będą uruchomione usługi odpowiedzialne za replikację danych oraz tworzenie kopii zapasowych. W razie potrzeby można zainstalować wtyczkę obsługującą własną chmurę ''Owncloud''.
 
 Dodatkowo kopie zapasowe z okresu powyżej roku przechowywane są na taśmach magnetycznych w pomieszczeniu archiwum.
 
