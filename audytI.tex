@@ -236,26 +236,29 @@ W tabeli 5. oceniono ryzyko związane z zagrożeniami ludzkimi.
 \end{longtable}
 \end{landscape}
 
-\newpage\section{Proponowane zmiany minimalizujące ryzyko wystąpienia zagrożeń}
+\newpage\section{Proponowane zmiany \newline minimalizujące ryzyko \newline wystąpienia zagrożeń}
 
 W poniższym rozdziale zostaną zaprezentowane propozycje, które zmniejszą ryzyko wystąpienia zagrożeń:
 \begin{itemize*}
-	\item w celu zmniejszenia prawdopodobieństwa wystąpienia pożaru, czy też zmniejszenia skutków wymienionego zagrożenia, należy rozważyć instalację systemu przeciwpożarowego w budynku, szczególnie w serwerowni oraz umieścić w pomieszczeniach gaśnice
-	\item aby, zmniejszyć negatywne skutki zaniku prądu, zaleca się wymianę komputerów stacjonarnych na laptopy oraz dołożyć dodatkowy zasilacz awaryjny (UPS), który będzie obsługiwał kamery wraz z rejestratorem
-	\item zamontowanie klimatyzacji w archiwum, w celu przedłużenia czasu przechowywania danych na nośnikach
-	\item zamontowanie większej ilości kamer wokół budynku
-	\item zastąpienie drzwi wejściowych, drzwi do serwera oraz drzwi do archiwum, na drzwi otwierane za pomocą karty magnetycznej
-	\item wprowadzając szkolenia dotyczące bezpiecznego używania sprzętu oraz sieci internetowej, zmniejsza się prawdopodobieństwo m.in. wystąpienia przypadkowego zainfekowania komputera przez pracownika
-	\item w celu zmniejszenia złamania haseł do komputerów, należy wymusić używanie haseł o minimalnej długości 8 znaków, zawierających minimum jedną cyfrę, jedną wielką literę i jedną cyfrę oraz wymusić zmianę haseł co 30 dni
-	\item zainstalowanie zaawansowanego pakietu zabezpieczającego komputer Avast Premier
-	\item regularne aktualizowanie oprogramowania oraz skanowanie urządzeń programem antywirusowym
-	\item wprowadzenie okresowych audytów bezpieczeństwa
-	\item szyfrowanie przesyłanych danych między urządzeniami podłączonymi do sieci internegowej
-	\item blokowanie nieznanych urządzeń podłączanych do komputera
-	\item oddzielenie sieci przewodowej od bezprzewodowej za pomocą dwóch osobnych połączeń między dostawcą Internetu a przedsiębiorstwem
-	\item zamontowanie odbiorników GPS w urządzeniach w celu odnalezienia ukradzionego sprzętu
-	\item oznakowanie sprzętu specjalną farbą w celu łatwiejszej weryfikacji ukradzionego sprzętu
-	\item dokupienie zapasowego sprzętu w celu szybszego powrotu do funkcjonowania przedsiębiorstwa  
-	\item monitorowanie ruchu sieciowego
-	\item szyfrowanie dysków w serwerach i komputerach pracowników
+	\item w celu zmniejszenia prawdopodobieństwa wystąpienia pożaru, czy też zmniejszenia skutków wymienionego zagrożenia, należy rozważyć instalację systemu przeciwpożarowego w budynku, szczególnie w serwerowni oraz umieścić w pomieszczeniach gaśnice,
+	\item aby, zmniejszyć negatywne skutki zaniku prądu, zaleca się wymianę komputerów stacjonarnych na laptopy oraz dołożyć dodatkowo generator prądotwórczy, który zasili urządzenia w razie awarii zasilania,
+	\item zamontowanie klimatyzacji w archiwum, w celu przedłużenia czasu przechowywania danych na nośnikach,
+	\item zamontowanie większej ilości kamer wokół budynku, jak wewnątrz --- zniwelowanie martwych punktów, propozycją zamontowania nowych kamer jest:
+		\begin{itemize*}
+			\item kamera zewnętrzna w drugim, prawym roku budynku --- zabezpieczy okna znajdujące się w biurze ekonomistów II oraz mury archiwum,
+			\item kamera wewnętrzna w pomieszczeniu sekretariatu --- kamerę 4 zamienić na kamerę rybie oko 360 stopni Bosch Flexidome 8000, a obecną przenieść w narożnik obok switcha 2,
+		\end{itemize*}
+	\item zastąpienie drzwi wejściowych, drzwi do serwera oraz drzwi do archiwum, na drzwi otwierane za pomocą karty magnetycznej, z oprogramowaniem pozwalającym nadzorować czas pracy pracowników,
+	\item wprowadzając szkolenia dotyczące bezpiecznego używania sprzętu oraz sieci internetowej, zmniejsza się prawdopodobieństwo m.in. wystąpienia przypadkowego zainfekowania komputera przez pracownika,
+	\item w celu zmniejszenia zagrożenia złamania haseł do komputerów, należy wymusić używanie haseł o minimalnej długości 8 znaków, zawierających minimum jedną cyfrę, jedną wielką literę i jedną cyfrę oraz wymusić zmianę haseł co 30 dni --- umożliwi to utworzenie domeny Active Directory zarządzanej przez administratorów,
+	\item zainstalowanie zaawansowanego pakietu zabezpieczającego komputer Avast Premier,
+	\item regularne aktualizowanie oprogramowania oraz skanowanie urządzeń programem antywirusowym,
+	\item szyfrowanie przesyłanych danych między urządzeniami podłączonymi do sieci internetowej, najlepiej kluczem asymetrycznym RSA lub symetrycznym o minimalnej długości 256 bitów,
+	\item blokowanie nieznanych urządzeń podłączanych do komputera, takich jak pendrivy, dyski twarde,
+	\item oddzielenie sieci przewodowej od bezprzewodowej za pomocą dwóch osobnych połączeń między dostawcą Internetu, a przedsiębiorstwem, takie rozwiązanie z jednej strony odseparuje podatności sieci bezprzewodowej, pozwalając na przetwarzanie bardziej wrażliwych danych przez sieć przewodową, z drugiej strony, w razie awarii sieci jednego z dostawców Internetu, istnieje możliwość przełączenia między sobą sieci nie dopuszczając do sytuacji braku dostępu,
+	\item zamontowanie odbiorników GPS w urządzeniach w celu odnalezienia ukradzionego sprzętu,
+	\item oznakowanie sprzętu specjalną farbą w celu łatwiejszej weryfikacji skradzionego sprzętu,
+	\item dokupienie zapasowego sprzętu w celu szybszego powrotu do funkcjonowania przedsiębiorstwa,
+	\item monitorowanie ruchu sieciowego,
+	\item szyfrowanie dysków w serwerach i komputerach pracowników --- zabezpieczy to dane przed kradzieżą dysków, lecz spowolni pracę dysków.
 \end{itemize*}
