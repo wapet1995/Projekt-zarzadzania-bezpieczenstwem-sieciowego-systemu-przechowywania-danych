@@ -1,58 +1,11 @@
 % !TeX spellcheck = pl_PL
-\newpage\section{Identyfikacja zagrożeń \newline i analiza ryzyka}
-W niniejszym rozdziale zostanie przeprowadzony audyt bezpieczeństwa. Zostaną przedstawione potencjalne zagrożenia w systemie oraz zdefiniowana zostanie metoda oceny ryzyka.
-
-\subsection{Ocena ryzyka - metoda jakościowa}
-Do oceny ryzyka wykorzystano metodę jakościową OWASP Risk Rating Methodology. W zależności od wpływu oraz prawdopodobieństwa wystąpienia zagrożenia, określa się jakie ze sobą niesie ryzyko. 
-\begin{table}[!ht]
-	\centering
-	\caption{Kryteria oceny jakościowej}
-	\label{ocenaRyzyka}
-	\begin{tabular}{|c|c|c|c|c|}
-		\hline 
-		\multicolumn{5}{|c|}{Ryzyko}        \\ \hline
-		\multirow{4}{*}{} & Wysoki  & \cellcolor{orange} Średnie     &\cellcolor{red}  Wysokie   & \cellcolor{pink} Krytyczne     \\ \cline{2-5} 
-		Wpływ	  & Średni  & \cellcolor{yellow} Niskie    	 & \cellcolor{orange} Średnie    & \cellcolor{red}  Wysokie   \\ \cline{2-5}
-		& Niski   & \cellcolor{green} Bardzo niskie &  \cellcolor{yellow} Niskie     & \cellcolor{orange} Średnie    \\ \cline{2-5}
-		&     	& Niskie   			& Średnie    &  Wysokie    \\ \hline
-		& \multicolumn{4}{c|}{Prawdopodobieństwo}  \\  \hline 
-	\end{tabular}
-\end{table}
+\newpage
+\section{Identyfikacja zagrożeń \newline i analiza ryzyka \newline po zabezpieczeniu firmy}
+Po zaproponowaniu zabezpieczeń, zostanie wykonany ponownie audyt bezpieczeństwa. Rozdział wykazać ma poprawę bezpieczeństwa oraz wskazać wciąż potencjalnie niebezpieczne fragmenty systemu firmy.
+Podobnie jak w poprzednim audycie posłużymy się metodą jakościową.
 
 \subsection{Zagrożone zasoby}
-Każdy zasób należy chronić, ale nie wszystkie wymagają zabezpieczenia na jednolitym poziomie. W tabeli \ref{tab:spis_zasobow} znajduje się spis sprzętu oraz danych wraz z ich priorytetem  ważności (1 --- najważniejszy, 10 --- najniższy), które zostaną brane pod uwagę podczas przeprowadzania audytu. 
-
-\definecolor{lightgray}{gray}{0.9}
-\begin{longtable}[!ht]{|p{0.5cm}|m{4cm}|m{2cm}|m{6cm}|}
-	\caption{Wykaz zasobów uwzględnianych w audycie}
-	\label{tab:spis_zasobow}\\
-	\hline	
-	\rowcolor{lightgray}\textbf{Lp.} & \textbf{Zasób} & \textbf{Priorytet ważności} & \textbf{Opis} \\ \hline
-	\rowcolor{lightgray}\multicolumn{4}{|c|}{Serwery:} \\ \hline
-	1 & Kopie zapasowe & 2 & Dane potrzebne do odzyskania \linebreak sprawności systemów \\ \hline
-	2 & Dyski twarde & 1 & Pamięć trwała serwera \\ \hline
-	3 & Baza danych & 3 & Przechowywanie wrażliwych danych klientów \\ \hline
-	4 & Zasilanie & 8 & Utrzymanie pracy serwerów \\ \hline
-	\rowcolor{lightgray}\multicolumn{4}{|c|}{Komputery pracowników:} \\ \hline	
-	5 & Dyski twarde & 6 & Pamięć trwała komputera \\ \hline
-	6 & Kopie zapasowe & 7 & Dane potrzebne do odtworzenia \linebreak systemu \\ \hline
-	7 & Dane klientów & 4 & Dane osobowe oraz finansowe klientów \\ \hline
-	8 & Zasilanie komputerów stacjonarnych & 9 & Utrzymanie pracy sprzętu \\ \hline
-	9 & Zasilanie laptopów & 10 &  Utrzymanie pracy sprzętu \\ \hline
-	10 & Hasła użytkowników & 5 & Hasła systemowe użytkowników \\ \hline
-	\rowcolor{lightgray}\multicolumn{4}{|c|}{Archiwum:} \\ \hline
-	11 & Dokumenty papierowe & 4 & Dokumenty archiwalne klientów \\	\hline
-	12 & Taśmy magnetyczne z kopiami zapasowymi & 3 & Dane potrzebne do odzyskania \linebreak  sprawności systemu \\ \hline
-	\rowcolor{lightgray}\multicolumn{4}{|c|}{Inne:} \\ \hline
-	13 & Rejestrator kamer & 8 & Nagrania z monitoringu \\ \hline
-	14 & Sieć bezprzewodowa & 6 & Sieć połączona z siecią firmy \\ \hline
-	15 & Switche sieciowe & 6 & Pośredniczą w przesyle danych przez sieć \\ \hline
-	16 & Router & 8 & Umożliwia dostęp do Internetu \\ \hline
-	17 & Telefony IP & 6 & Umożliwiają komunikację wewnątrz budynku \\ \hline
-	18 & Bramka VoIP & 5 & Pośredniczy pomiędzy połączeniem telefonów IP \\ \hline
-	19 & Zasilanie budynku & 10 & Zasilanie oświetlania, drzwi przesuwnych itp. \\ \hline
-	20 & Dostępność \linebreak do Internetu & 10 & Dostęp do Internetu od dostawcy \\ \hline 
-\end{longtable}
+Spis zasobów, które zostaną brane pod uwagę podczas przeprowadzania audytu znajdują się w Tabeli \ref{tab:spis_zasobow}.
 
 \subsection{Zagrożenia systemu}
 W tym podrozdziale opisane zostaną potencjalne zagrożenia oraz w tabelach zostanie ocenione ryzyko jakie niosą ze sobą dane niebezpieczeństwa. Zagrożenia podzielono na trzy kategorie: zagrożenia naturalne, zagrożenia ludzkie oraz zagrożenia techniczne.
@@ -65,7 +18,7 @@ Zagrożenia naturalne związane są z lokalizacją przedsiębiorstwa, należą d
 	\item pożar.
 \end{itemize*}
 
-Wymienione zagrożenia mają wpływ na dostępność danych. W budynku nie ma systemu przeciwpożarowego, a więc podczas pożaru, wysoka temperatura może uszkodzić sprzęt. Również uszkodzenie sprzętu może nastąpić w czasie zaniku prądu. Zasilacze awaryjne (UPS) podczas braku prądu dostarczają energię elektryczną tylko do serwerów i pozostały sprzęt jest narażony na uszkodzenie. W tabeli \ref{zagrożeniaN_natalne} oceniono ryzyko związane z zagrożeniami naturalnymi.
+Wymienione zagrożenia mają wpływ na dostępność danych. W budynku nie ma systemu przeciwpożarowego, a więc podczas pożaru, wysoka temperatura może uszkodzić sprzęt. Również uszkodzenie sprzętu może nastąpić w czasie zaniku prądu. Zasilacze awaryjne (UPS) podczas braku prądu dostarczają energię elektryczną tylko do serwerów i pozostały sprzęt jest narażony na uszkodzenie. W tabeli \ref{zagrożeniaN_natalne2} oceniono ryzyko związane z zagrożeniami naturalnymi.
 
 \begin{landscape}
 	\begin{longtable}[ht!]{|m{3cm}|m{5cm}|m{4.5cm}|m{3cm}|m{3cm}|m{0.5cm}|m{0.5cm}|m{0.5cm}|}
@@ -91,13 +44,13 @@ Wymienione zagrożenia mają wpływ na dostępność danych. W budynku nie ma sy
 \end{landscape}
 
 \subsubsection{Zagrożenia techniczne}
-System firmy narażony jest również na zagrożenia stricte związane z informatyka (aspektem technicznym). Niebezpieczeństwa ze strony technicznej wymieniono zostały w tabeli  \ref{tab:zagrozenia_techniczne}. Określono stopień ryzyka dla każdego istotnego zasobu systemu.
+System firmy narażony jest również na zagrożenia stricte związane z informatyka (aspektem technicznym). Niebezpieczeństwa ze strony technicznej wymieniono zostały w tabeli  \ref{tab:zagrozenia_techniczne2}. Określono stopień ryzyka dla każdego istotnego zasobu systemu.
 \definecolor{verylightgray}{gray}{0.5}
 
 \begin{landscape}
 	\begin{longtable}[ht!]{|m{3cm}|m{6cm}|m{4.5cm}|m{3cm}|m{3cm}|m{0.5cm}|m{0.5cm}|m{0.5cm}|}
 		\caption{Wykaz zagrożeń technicznych}
-		\label{tab:zagrozenia_techniczne}\\
+		\label{tab:zagrozenia_techniczne2}\\
 		\hline	
 		\textbf{Podatność} & \textbf{Zasoby} & \textbf{Prawdopodobieństwo} & \textbf{Wpływ} &  \textbf{Ryzyko} & \textbf{P} & \textbf{D} & \textbf{I} \\ \hline
 		\multirow{5}{4cm}{Złamanie hasła administratora dowolnego komputera}  
@@ -177,13 +130,13 @@ Do zagrożeń ludzkich należą:
 	\item atak hakerski 
 \end{itemize*}
 
-Wyżej wymienione zagrożenia ludzkie wpływają na poufność, integralność oraz na dostępność danych. Do budynku łatwo można się wkraść, ponieważ nie ma wystarczającej ilości kamer, aby odpowiednio monitorować cały obiekt. Dodatkowo, system monitoringu nie ma awaryjnego zasilania i w chwili zaniku prądu jest bezużyteczny. Również brakuje alarmów przy drzwiach oraz oknach. Pracownicy mogą dostać się do pomieszczeń za pomocą zwykłych kluczy. Taka sytuacja powoduje, że osoba używająca np. wytrychu jest wstanie w krótkim czasie dostać się do jakiekolwiek pomieszczenia. Brak oprogramowania służącego do blokowania stron internetowych umożliwia wejście na takie strony i nieświadome zawirusowanie sprzętu. Na serwerach nie ma zainstalowanych dodatkowych programów związanych z bezpieczeństwem, przez co sprzęt narażony jest na ataki hakerskie. Pracownicy mogą skopiować dokumenty przedsiębiorstwa, ponieważ porty USB nie są zabezpieczone. Brak też zabezpieczeń w komunikacji między komputerami i miIędzy komputerem a drukarką. Istnieje więc ryzyko nie tylko przejęcia pliku, ale również jego zmodyfikowanie przez nieautoryzowaną osobę.
+Wyżej wymienione zagrożenia ludzkie wpływają na poufność, integralność oraz na dostępność danych. Do budynku łatwo można się wkraść, ponieważ nie ma wystarczającej ilości kamer, aby odpowiednio monitorować cały obiekt. Dodatkowo, system monitoringu nie ma awaryjnego zasilania i w chwili zaniku prądu jest bezużyteczny. Również brakuje alarmów przy drzwiach oraz oknach. Pracownicy mogą dostać się do pomieszczeń za pomocą zwykłych kluczy. Taka sytuacja powoduje, że osoba używająca np. wytrychu jest wstanie w krótkim czasie dostać się do jakiekolwiek pomieszczenia. Brak oprogramowania służącego do blokowania stron internetowych umożliwia wejście na takie strony i nieświadome zawirusowanie sprzętu. Na serwerach nie ma zainstalowanych dodatkowych programów związanych z bezpieczeństwem, przez co sprzęt narażony jest na ataki hakerskie. Pracownicy mogą skopiować dokumenty przedsiębiorstwa, ponieważ porty USB nie są zabezpieczone. Brak też zabezpieczeń w komunikacji między komputerami i między komputerem a drukarką. Istnieje więc ryzyko nie tylko przejęcia pliku, ale również jego zmodyfikowanie przez nieautoryzowaną osobę.
 W tabeli 5. oceniono ryzyko związane z zagrożeniami ludzkimi.
 
 \begin{landscape}
 	\begin{longtable}[ht!]{|m{4cm}|m{6cm}|m{4.5cm}|m{2.5cm}|m{2.5cm}|m{0.5cm}|m{0.5cm}|m{0.5cm}|}
 		\caption{Wykaz zagrożeń ludzkich}
-		\label{tab::zagrozenia_ludzkie} \\
+		\label{tab::zagrozenia_ludzkie2} \\
 		\hline
 		\textbf{Podatność} & \textbf{Zasoby} & \textbf{Prawdopodobieństwo} & \textbf{Wpływ} &  \textbf{Ryzyko} & \textbf{P} & \textbf{D} & \textbf{I} \\ \hline
 		\multirow{8}{4cm}{Kradzież sprzętu oraz dokumentów przez pracowników lub osoby spoza firmy}            
@@ -235,30 +188,3 @@ W tabeli 5. oceniono ryzyko związane z zagrożeniami ludzkimi.
 		\hline
 	\end{longtable}
 \end{landscape}
-
-\newpage\section{Proponowane zmiany \newline minimalizujące ryzyko \newline wystąpienia zagrożeń}
-
-W poniższym rozdziale zostaną zaprezentowane propozycje, które zmniejszą ryzyko wystąpienia zagrożeń:
-\begin{itemize*}
-	\item w celu zmniejszenia prawdopodobieństwa wystąpienia pożaru, czy też zmniejszenia skutków wymienionego zagrożenia, należy rozważyć instalację systemu przeciwpożarowego w budynku, szczególnie w serwerowni oraz umieścić w pomieszczeniach gaśnice,
-	\item aby, zmniejszyć negatywne skutki zaniku prądu, zaleca się wymianę komputerów stacjonarnych na laptopy oraz dołożyć dodatkowo generator prądotwórczy, który zasili urządzenia w razie awarii zasilania,
-	\item zamontowanie klimatyzacji w archiwum, w celu przedłużenia czasu przechowywania danych na nośnikach,
-	\item zamontowanie większej ilości kamer wokół budynku, jak wewnątrz --- zniwelowanie martwych punktów, propozycją zamontowania nowych kamer jest:
-	\begin{itemize*}
-		\item kamera zewnętrzna w drugim, prawym roku budynku --- zabezpieczy okna znajdujące się w biurze ekonomistów II oraz mury archiwum,
-		\item kamera wewnętrzna w pomieszczeniu sekretariatu --- kamerę 4 zamienić na kamerę rybie oko 360 stopni Bosch Flexidome 8000, a obecną przenieść w narożnik obok switcha 2,
-	\end{itemize*}
-	\item zastąpienie drzwi wejściowych, drzwi do serwera oraz drzwi do archiwum, na drzwi otwierane za pomocą karty magnetycznej, z oprogramowaniem pozwalającym nadzorować czas pracy pracowników,
-	\item wprowadzając szkolenia dotyczące bezpiecznego używania sprzętu oraz sieci internetowej, zmniejsza się prawdopodobieństwo m.in. wystąpienia przypadkowego zainfekowania komputera przez pracownika,
-	\item w celu zmniejszenia zagrożenia złamania haseł do komputerów, należy wymusić używanie haseł o minimalnej długości 8 znaków, zawierających minimum jedną cyfrę, jedną wielką literę i jedną cyfrę oraz wymusić zmianę haseł co 30 dni --- umożliwi to utworzenie domeny Active Directory zarządzanej przez administratorów,
-	\item zainstalowanie zaawansowanego pakietu zabezpieczającego komputer Avast Premier,
-	\item regularne aktualizowanie oprogramowania oraz skanowanie urządzeń programem antywirusowym,
-	\item szyfrowanie przesyłanych danych między urządzeniami podłączonymi do sieci internetowej, najlepiej kluczem asymetrycznym RSA lub symetrycznym o minimalnej długości 256 bitów,
-	\item blokowanie nieznanych urządzeń podłączanych do komputera, takich jak pendrivy, dyski twarde,
-	\item oddzielenie sieci przewodowej od bezprzewodowej za pomocą dwóch osobnych połączeń między dostawcą Internetu, a przedsiębiorstwem, takie rozwiązanie z jednej strony odseparuje podatności sieci bezprzewodowej, pozwalając na przetwarzanie bardziej wrażliwych danych przez sieć przewodową, z drugiej strony, w razie awarii sieci jednego z dostawców Internetu, istnieje możliwość przełączenia między sobą sieci nie dopuszczając do sytuacji braku dostępu,
-	\item zamontowanie odbiorników GPS w urządzeniach w celu odnalezienia ukradzionego sprzętu,
-	\item oznakowanie sprzętu specjalną farbą w celu łatwiejszej weryfikacji skradzionego sprzętu,
-	\item dokupienie zapasowego sprzętu w celu szybszego powrotu do funkcjonowania przedsiębiorstwa,
-	\item monitorowanie ruchu sieciowego,
-	\item szyfrowanie dysków w serwerach i komputerach pracowników --- zabezpieczy to dane przed kradzieżą dysków, lecz spowolni pracę dysków.
-\end{itemize*}
