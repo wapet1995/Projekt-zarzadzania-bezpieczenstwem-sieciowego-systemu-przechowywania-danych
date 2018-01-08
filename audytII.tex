@@ -46,82 +46,6 @@ W tabeli \ref{zagrożeniaN_natalne2} oceniono ryzyko związane z zagrożeniami n
 \end{landscape}
 
 \subsubsection{Zagrożenia techniczne}
-System firmy narażony jest również na zagrożenia stricte związane z informatyka (aspektem technicznym). Niebezpieczeństwa ze strony technicznej wymieniono zostały w tabeli  \ref{tab:zagrozenia_techniczne2}. Określono stopień ryzyka dla każdego istotnego zasobu systemu.
-\definecolor{verylightgray}{gray}{0.5}
-
-\begin{landscape}
-	\begin{longtable}[ht!]{|m{3cm}|m{6cm}|m{4.5cm}|m{3cm}|m{3cm}|m{0.5cm}|m{0.5cm}|m{0.5cm}|}
-		\caption{Wykaz zagrożeń technicznych}
-		\label{tab:zagrozenia_techniczne2}\\
-		\hline	
-		\textbf{Podatność} & \textbf{Zasoby} & \textbf{Prawdopodobieństwo} & \textbf{Wpływ} &  \textbf{Ryzyko} & \textbf{P} & \textbf{D} & \textbf{I} \\ \hline
-		\multirow{5}{4cm}{Złamanie hasła administratora dowolnego komputera}  
-		&   Serwer --- baza danych,  & Wysokie & Wysoki & \textcolor{pink}{Krytyczne} & X & X & X  \\ \cline{2-8}
-		& Komputery pracowników --- dane klientów & Wysokie & Wysoki & \textcolor{pink}{Krytyczne}  & X & X & X  \\ \cline{2-8}
-		& Komputery pracowników --- hasła użytkowników & Średnie & Wysoki & \textcolor{red}{Wysokie}  & X & X & X  \\ \cline{2-8}
-		& Komputery pracowników --- kopie zapasowe & Wysokie & Średni & \textcolor{red}{Wysokie}  & X & X & X  \\ \cline{2-8}
-		& Bramka VoIP & Średnie & Średni & \textcolor{orange}{Średnie}  & X & X & X  \\ \cline{2-8}
-		& Telefon IP & Niskie & Średni & \textcolor{yellow}{Niskie}  & X & X & X  \\ \cline{2-8}
-		& Rejestrator kamer & Niskie & Średni & \textcolor{yellow}{Niskie}  & X & X & X  \\ \cline{2-8}
-		& Pozostałe zasoby & Niski & Niski & \textcolor{green}{Bardzo niskie} & X & X & X  \\ \cline{2-8}
-		\hline
-		\multirow{8}{4cm}{Infekcja komputera wirusem typu ransomware}
-		& Serwer --- kopie zapasowe & Wysokie & Wysoki & \textcolor{pink}{Krytyczne}& X & X & X  \\ \cline{2-8} \cline{2-5}
-		& Serwer --- dyski twarde & Wysokie & Wysoki & \textcolor{pink}{Krytyczne} & X & X & X  \\ \cline{2-8}
-		& Serwer --- baza danych & Wysokie & Wysoki & \textcolor{pink}{Krytyczne} & X & X & X  \\ \cline{2-8}
-		& Komputery pracowników --- dyski twarde & Wysokie & Średni & \textcolor{red}{Wysokie} & X & X & X  \\ \cline{2-8}
-		& Komputery pracowników --- kopie zapasowe & Wysokie & Średni & \textcolor{red}{Wysokie} & X & X & X  \\ \cline{2-8}
-		& Komputery pracowników --- dane klientów & Wysokie & Średni & \textcolor{red}{Wysokie} & X & X & X  \\ \cline{2-8}
-		& Rejestrator kamer & Wysokie & Niski & \textcolor{orange}{Średnie} & X & X & X  \\ \cline{2-8}
-		& Pozostałe zasoby & Niskie & Niski & \textcolor{green}{Bardzo niskie} & X & X & X  \\ \cline{2-8}
-		\hline 
-		\newpage
-		\hline
-		\multirow{11}{4cm}{Szkodliwe oprogramowanie} 
-		& Serwer --- kopie zapasowe & Średnie & Wysoki & \textcolor{red}{Wysokie} & X & X & X  \\ \cline{2-8}
-		& Serwer --- dyski twarde & Średnie & Wysoki & \textcolor{red}{Wysokie} & X & X & X  \\ \cline{2-8}
-		& Serwer --- baza danych & Średnie & Wysoki & \textcolor{red}{Wysokie} & X & X & X  \\ \cline{2-8}
-		& Komputery pracowników --- dyski twarde & Wysokie & Średni & \textcolor{red}{Wysokie} & X & X & X  \\ \cline{2-8}
-		& Komputery pracowników --- kopie zapasowe & Średnie & Średni & \textcolor{orange}{Średnie} & X & X & X  \\ \cline{2-8}
-		& Komputery pracowników --- dane klientów & Wysokie & Wysoki & \textcolor{pink}{Krytyczne}& X & X & X  \\ \cline{2-8}
-		& Komputery pracowników --- hasła użytkowników & Średnie & Wysoki & \textcolor{red}{Wysokie} & X & X & X  \\ \cline{2-8}
-		& Sieć bezprzewodowa & Niskie & Średni & \textcolor{yellow}{Niskie} & X & X & X  \\ \cline{2-8}
-		& Bramka VoIP & Średnie & Średni & \textcolor{orange}{Średnie} & X & X & - \\ \cline{2-8}
-		& Telefon IP & Średnie & Średni & \textcolor{orange}{Średnie} & X & X & - \\ \cline{2-8}
-		& Pozostałe zasoby & Niskie & Niski & \textcolor{green}{Bardzo niskie} & - & X & -  \\ \cline{2-8}
-		\hline
-		\multirow{6}{4cm}{Zużycie sprzętu (dysk, zasilacz, inne podzespoły)}
-		& Serwer --- dyski twarde & Wysokie & Wysoki & \textcolor{pink}{Krytyczne} & - & X & X  \\ \cline{2-8}
-		& Serwer --- kopie zapasowe & Wysokie & Wysoki & \textcolor{pink}{Krytyczne} & - & X & X  \\ \cline{2-8}
-		& Serwer --- dyski twarde & Wysokie & Wysoki & \textcolor{pink}{Krytyczne} & - & X & X  \\ \cline{2-8}
-		& Serwer --- zasilanie & Wysokie &Średni & \textcolor{red}{Wysokie} & - & X & -  \\ \cline{2-8}
-		& Komputery pracowników --- dyski twarde & Niskie & Średni & \textcolor{yellow}{Niskie} & - & X & X  \\ \cline{2-8}
-		& Komputery pracowników --- kopie zapasowe & Niskie & Średni & \textcolor{yellow}{Niskie} & - & X & X  \\ \cline{2-8}
-		& Pozostałe zasoby & Niskie & Niskie & \textcolor{green}{Bardzo niskie} & - & X & -  \\
-		\hline
-		\newpage
-		\hline
-		\multirow{4}{4cm}{atak DDoS}
-		& Serwer --- dyski twarde & niskie  & wysoki & \textcolor{pink}{Krytyczne} & - & X & -  \\ \cline{2-8}
-		& Serwer --- baza danych & wysokie & wysoki & \textcolor{pink}{Krytyczne} & - & X & -  \\ \cline{2-8} 
-		& Komputery pracowników --- dyski twarde  & niskie  & średni & \textcolor{yellow}{Niskie} & - & X & -  \\ \cline{2-8}
-		& Router & średnie  & średnie & \textcolor{orange}{Średnie} & - & X & -  \\ \cline{2-8} 
-		& Pozostałe zasoby & niskie  & niski & \textcolor{green}{Bardzo niskie} & - & X & -  \\
-		\hline
-		\multirow{8}{4cm}{atak hakerski \linebreak (innego rodzaju)}
-		& Serwer --- kopie zapasowe  & wysokie & wysoki & \textcolor{pink}{Krytyczne} & X & X & X  \\ \cline{2-8}
-		& Serwer --- dyski twarde & wysokie  & wysoki & \textcolor{pink}{Krytyczne} & X & X & X  \\ \cline{2-8}
-		& Serwer --- baza danych & wysokie & wysoki & \textcolor{pink}{Krytyczne} & X & X & X  \\ \cline{2-8}
-		& Komputery pracowników --- kopie zapasowe & wysokie & wysoki & \textcolor{pink}{Krytyczne} & X & X & X  \\ \cline{2-8}
-		& Komputery pracowników --- dyski twarde  & wysokie  & wysoki & \textcolor{pink}{Krytyczne}& X & X & X  \\ \cline{2-8}
-		& Komputery pracowników --- dane klientów & wysokie & wysoki & \textcolor{pink}{Krytyczne} & X & X & X  \\ \cline{2-8}
-		& Router & średnie  & średnie & \textcolor{orange}{Średnie} & X & X & X  \\ \cline{2-8}
-		& Pozostałe zasoby & niskie  & niski & \textcolor{green}{Bardzo niskie} & X & X & X  \\
-		\hline
-	\end{longtable}
-\end{landscape}
-
-\subsection{Zagrożenia techniczne}
 Szkolenia pracowników, stosowanie reguł wymuszających regularne zmiany haseł oraz systematyczne aktualizacje oprogramowania pozwalają zmniejszyć prawdopodobnieństwo złamania haseł do kont administratorów. Również zmniejsza się prawdopodobieństwo występowania infekcji systemu wywołanego przez wirusa typu ransomware oraz używania szkodliwego oprogramowania. Dokupienie zapasowego sprzętu zmniejsza wpływ podczas awarii. Zmiany w przedsiębiorstwie nie mają wpływu na ataki DDoS. Przeciwdziałanie takiej podatności jest zbyt kosztowne do zamierzonych celów.
 
 
@@ -134,12 +58,12 @@ Szkolenia pracowników, stosowanie reguł wymuszających regularne zmiany haseł
 		\multirow{5}{4cm}{Złamanie hasła administratora dowolnego komputera}  
 		&   Serwer --- baza danych,  & Średnie & Wysoki & \textcolor{red}{Wysokie} & X & X & X  \\ \cline{2-8}
 		& Komputery pracowników --- dane klientów & Średnie & Wysoki & \textcolor{red}{Wysokie}  & X & X & X  \\ \cline{2-8}
-		& Komputery pracowników --- hasła użytkowników to jest takie samo & Średnie & Wysoki & \textcolor{red}{Wysokie}  & X & X & X  \\ \cline{2-8}
+		& Komputery pracowników --- hasła użytkowników  & Średnie & Wysoki & \textcolor{red}{Wysokie}  & X & X & X  \\ \cline{2-8}
 		& Komputery pracowników --- kopie zapasowe & Średnie & Średni & \textcolor{orange}{Średnie}  & X & X & X  \\ \cline{2-8}
-		& Bramka VoIP to jest takie samo & Średnie & Średni & \textcolor{orange}{Średnie}  & X & X & X  \\ \cline{2-8}
-		& Telefon IP to jest takie samo & Niskie & Średni & \textcolor{yellow}{Niskie}  & X & X & X  \\ \cline{2-8}
-		& Rejestrator kamer to jest takie samo & Niskie & Średni & \textcolor{yellow}{Niskie}  & X & X & X  \\ \cline{2-8}
-		& Pozostałe zasoby to ejst takie samo & Niski & Niski & \textcolor{green}{Bardzo niskie} & X & X & X  \\ \cline{2-8}
+		& Bramka VoIP & Średnie & Średni & \textcolor{orange}{Średnie}  & X & X & X  \\ \cline{2-8}
+		& Telefon IP & Niskie & Średni & \textcolor{yellow}{Niskie}  & X & X & X  \\ \cline{2-8}
+		& Rejestrator kamer  & Niskie & Średni & \textcolor{yellow}{Niskie}  & X & X & X  \\ \cline{2-8}
+		& Pozostałe zasoby  & Niski & Niski & \textcolor{green}{Bardzo niskie} & X & X & X  \\ \cline{2-8}
 		\hline
 		\multirow{8}{4cm}{Infekcja komputera wirusem typu ransomware}
 		& Serwer --- kopie zapasowe & Średnie & Wysoki & \textcolor{red}{Wysokie}& X & X & X  \\ \cline{2-8} \cline{2-5}
@@ -149,7 +73,7 @@ Szkolenia pracowników, stosowanie reguł wymuszających regularne zmiany haseł
 		& Komputery pracowników --- kopie zapasowe & Średnie & Średni & \textcolor{orange}{Średnie} & X & X & X  \\ \cline{2-8}
 		& Komputery pracowników --- dane klientów & Średnie & Średni & \textcolor{orange}{Średnie} & X & X & X  \\ \cline{2-8}
 		& Rejestrator kamer & Średnie & Niski & \textcolor{yellow}{Niskie} & X & X & X  \\ \cline{2-8}
-		& Pozostałe zasoby to jest tkaie samo & Niskie & Niski & \textcolor{green}{Bardzo niskie} & X & X & X  \\ \cline{2-8}
+		& Pozostałe zasoby & Niskie & Niski & \textcolor{green}{Bardzo niskie} & X & X & X  \\ \cline{2-8}
 		\hline 
 		\newpage
 		\hline
@@ -173,7 +97,7 @@ Szkolenia pracowników, stosowanie reguł wymuszających regularne zmiany haseł
 		& Serwer --- zasilanie & Wysokie &Niskie & \textcolor{orange}{Średnie} & - & X & -  \\ \cline{2-8}
 		& Komputery pracowników --- dyski twarde & Niskie & Niskie & \textcolor{green}{Bardzo niskie} & - & X & X  \\ \cline{2-8}
 		& Komputery pracowników --- kopie zapasowe & Niskie & Niskie & \textcolor{green}{Bardzo niskie} & - & X & X  \\ \cline{2-8}
-		& Pozostałe zasoby takie samo & Niskie & Niskie & \textcolor{green}{Bardzo niskie} & - & X & -  \\
+		& Pozostałe zasoby & Niskie & Niskie & \textcolor{green}{Bardzo niskie} & - & X & -  \\
 		\hline
 		\newpage
 		\hline
