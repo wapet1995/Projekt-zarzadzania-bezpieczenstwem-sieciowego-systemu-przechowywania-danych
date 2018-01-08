@@ -45,25 +45,24 @@ W tabeli \ref{zagrożeniaN_natalne2} oceniono ryzyko związane z zagrożeniami n
 	\end{longtable}
 \end{landscape}
 
-\subsubsection{Zagrożenia techniczne}
-Szkolenia pracowników, stosowanie reguł wymuszających regularne zmiany haseł oraz systematyczne aktualizacje oprogramowania pozwalają zmniejszyć prawdopodobnieństwo złamania haseł do kont administratorów. Również zmniejsza się prawdopodobieństwo występowania infekcji systemu wywołanego przez wirusa typu ransomware oraz używania szkodliwego oprogramowania. Dokupienie zapasowego sprzętu zmniejsza wpływ podczas awarii. Zmiany w przedsiębiorstwie nie mają wpływu na ataki DDoS. Przeciwdziałanie takiej podatności jest zbyt kosztowne do zamierzonych celów.
-
+\subsection{Zagrożenia techniczne}
+Szkolenia pracowników, stosowanie reguł wymuszających regularne zmiany haseł oraz systematyczne aktualizacje oprogramowania pozwalają zmniejszyć prawdopodobieństwo złamania haseł do kont administratorów. Również zmniejsza się prawdopodobieństwo występowania infekcji systemu wywołanego przez wirusa typu ransomware oraz używania szkodliwego oprogramowania. Dokupienie zapasowego sprzętu zmniejsza wpływ podczas awarii. Zmiany w przedsiębiorstwie nie mają wpływu na ataki DDoS. Przeciwdziałanie takiej podatności jest zbyt kosztowne do zamierzonych celów.
 
 \begin{landscape}
-	\begin{longtable}[ht!]{|m{3cm}|m{6cm}|m{4.5cm}|m{3cm}|m{3cm}|m{0.5cm}|m{0.5cm}|m{0.5cm}|}
+	\begin{longtable}[ht!]{|m{4cm}|m{6cm}|m{4.5cm}|m{2.5cm}|m{2.5cm}|m{0.5cm}|m{0.5cm}|m{0.5cm}|}
 		\caption{Wykaz zagrożeń technicznych}
-		\label{tab:zagrozenia_techniczne}\\
+		\label{tab:zagrozenia_techniczne2}\\
 		\hline	
 		\textbf{Podatność} & \textbf{Zasoby} & \textbf{Prawdopodobieństwo} & \textbf{Wpływ} &  \textbf{Ryzyko} & \textbf{P} & \textbf{D} & \textbf{I} \\ \hline
 		\multirow{5}{4cm}{Złamanie hasła administratora dowolnego komputera}  
 		&   Serwer --- baza danych,  & Średnie & Wysoki & \textcolor{red}{Wysokie} & X & X & X  \\ \cline{2-8}
 		& Komputery pracowników --- dane klientów & Średnie & Wysoki & \textcolor{red}{Wysokie}  & X & X & X  \\ \cline{2-8}
-		& Komputery pracowników --- hasła użytkowników  & Średnie & Wysoki & \textcolor{red}{Wysokie}  & X & X & X  \\ \cline{2-8}
+		& Komputery pracowników --- hasła użytkowników & Średnie & Wysoki & \textcolor{red}{Wysokie}  & X & X & X  \\ \cline{2-8}
 		& Komputery pracowników --- kopie zapasowe & Średnie & Średni & \textcolor{orange}{Średnie}  & X & X & X  \\ \cline{2-8}
 		& Bramka VoIP & Średnie & Średni & \textcolor{orange}{Średnie}  & X & X & X  \\ \cline{2-8}
 		& Telefon IP & Niskie & Średni & \textcolor{yellow}{Niskie}  & X & X & X  \\ \cline{2-8}
-		& Rejestrator kamer  & Niskie & Średni & \textcolor{yellow}{Niskie}  & X & X & X  \\ \cline{2-8}
-		& Pozostałe zasoby  & Niski & Niski & \textcolor{green}{Bardzo niskie} & X & X & X  \\ \cline{2-8}
+		& Rejestrator kamer & Niskie & Średni & \textcolor{yellow}{Niskie}  & X & X & X  \\ \cline{2-8}
+		& Pozostałe zasoby & Niski & Niski & \textcolor{green}{Bardzo niskie} & X & X & X  \\ \cline{2-8}
 		\hline
 		\multirow{8}{4cm}{Infekcja komputera wirusem typu ransomware}
 		& Serwer --- kopie zapasowe & Średnie & Wysoki & \textcolor{red}{Wysokie}& X & X & X  \\ \cline{2-8} \cline{2-5}
@@ -73,7 +72,7 @@ Szkolenia pracowników, stosowanie reguł wymuszających regularne zmiany haseł
 		& Komputery pracowników --- kopie zapasowe & Średnie & Średni & \textcolor{orange}{Średnie} & X & X & X  \\ \cline{2-8}
 		& Komputery pracowników --- dane klientów & Średnie & Średni & \textcolor{orange}{Średnie} & X & X & X  \\ \cline{2-8}
 		& Rejestrator kamer & Średnie & Niski & \textcolor{yellow}{Niskie} & X & X & X  \\ \cline{2-8}
-		& Pozostałe zasoby & Niskie & Niski & \textcolor{green}{Bardzo niskie} & X & X & X  \\ \cline{2-8}
+		& Pozostałe zasoby  & Niskie & Niski & \textcolor{green}{Bardzo niskie} & X & X & X  \\ \cline{2-8}
 		\hline 
 		\newpage
 		\hline
@@ -136,7 +135,7 @@ Do zagrożeń ludzkich należą:
 
 Wyżej wymienione zagrożenia ludzkie wpływają na poufność, integralność oraz na dostępność danych. Dostęp do budynku przez włamywaczy jest utrudniony, większe jest prawdopodobieństwo nagrania osoby nieuprawnionej. Istnieje ryzyko kradzieży, ponieważ w budynku nie są zastosowane aktywne systemy przeciwkradzieżowe, jedyną metodą zatrzymania przestępcy jest ochrona. Złodziej ma w znacznym stopniu utrudniony dostęp do pomieszczeń pracowniczych (drzwi z zamkami elektromagnetycznymi otwieranymi za pomocą kart), gdzie przechowywane sę dane pracowników oraz firm. 
 
- Oprogramowania antywirusowe służące m.in. do blokowania stron internetowych uniemożliwia wejście na strony niebezpieczne i nieświadome zawirusowanie sprzętu. Na serwerach mimo zainstalowanych dodatkowych programów związanych z bezpieczeństwem, sprzęt narażony jest wciąż na ataki hakerskie, lecz przez odpowiednio częste aktualizacje zagrożenie maleje na znane niezbeczene oprogramowanie.
+ Oprogramowania antywirusowe służące m.in. do blokowania stron internetowych uniemożliwia wejście na strony niebezpieczne i nieświadome zawirusowanie sprzętu. Na serwerach mimo zainstalowanych dodatkowych programów związanych z bezpieczeństwem, sprzęt narażony jest wciąż na ataki hakerskie, lecz przez odpowiednio częste aktualizacje zagrożenie maleje na znane niebezpieczne oprogramowanie.
 W tabeli 5. oceniono ryzyko związane z zagrożeniami ludzkimi.
 
 \begin{landscape}
